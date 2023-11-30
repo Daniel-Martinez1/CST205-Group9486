@@ -4,18 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Recall Search</title>
+    {{ bootstrap.load_css() }}
 </head>
-<body style="text-align: center;">
+<div style="text-align: center; margin-top: 13%" class= "p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
+<body style="background-color: rgb(62, 121, 84)">
+    <hr>
     <h1>Food Recall Search</h1>
     <hr>
-
+    
     <br><br>
     <form action="/search" method="post">
         <label for="input">Search Food Item:</label>
         <input type="text" id="input" name="input" required>
-        <input type="submit" value="Search">
+        <input type="submit" value="Search" class="btn btn-dark">
     </form>
     <br><br>
     <hr>
 </body>
+</div>
+<header>
+    <img src="static/images/header2.jpg" width="200" style="margin-top: 2%; margin-left: 85%; border-radius: 100px; opacity: 20%">
+</header>
 </html>

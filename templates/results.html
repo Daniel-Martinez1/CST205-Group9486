@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results</title>
-</head>
-<body>
-    <a href="{{ url_for('index') }}">Back to Search</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Results</title>
+        {{ bootstrap.load_css() }}
+    </head>
+<body style="background-color: rgb(62, 121, 84)">
+    <div style="margin-top: 5%" class= "p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
+    <div style="text-align: center; color: black;">
+    <a href="{{ url_for('index') }}" > Search </a>
+    </div>
+    <hr>
     <h1 style="text-align: center;">Search Results</h1>
     <hr>
+    
+    <br>
+    {% if no_results %}
+        <p style="text-align: center;"> No recalls found for {{ user_input }}!</p>
+    <br>
+    {% endif %}
+    
     <ul>
         {% for recall in recalls %}
             <li>
@@ -16,12 +28,22 @@
                 <br><br>
                 <strong>State:</strong> {{ recall.state }}
                 <br><br>
+                <strong>Adress:</strong> {{ recall.address_1 }}
+                <br><br>
+                <strong>Date Reported:</strong> {{ recall.report_date }}
+                <br><br>
+                <strong>Date Recalled:</strong> {{ recall.recall_initiation_date }}
+                <br><br>
                 <strong>Product Description:</strong> {{ recall.product_description }}
                 <br><br>
                 <strong>Recall Reason:</strong> {{ recall.reason_for_recall }}
             </li>
         {% endfor %}
     </ul>
-    <hr> 
+    <hr>
+     </div>
+     <header>
+        <!-- <img src="static/images/"> -->
+     </header>       
 </body>
 </html>
