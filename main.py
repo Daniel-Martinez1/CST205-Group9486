@@ -33,5 +33,4 @@ def search():
        except:
             pass
     else:
-    
-       return render_template('results.html', no_results = True, user_input = user_input)
+        return render_template('results.html', no_results = True, user_input = user_input)
