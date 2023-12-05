@@ -5,45 +5,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food Recall Search</title>
     {{ bootstrap.load_css() }}
+    {{ bootstrap.load_js() }}
+    <link rel="stylesheet" href="css/styles.css">
 </head>
-<div style="text-align: center; margin-top: 13%" class= "p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
-<body style="background-color: rgb(62, 121, 84)">
-    <div id="carouselExample" class="carousel slide">
+<body style="background-color: #EEEEEE; border-top: #393E46; border-width: 4px;">
+  <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="static/images/logo.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top" style="border-radius: 50px;">
+        Food Center
+      </a>
+    </div>
+  </nav>
+  <br>
+  <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 5%; border-style: dashed; border-color: #EE7214; border-width: 5px;
+  border-spacing: 15px;">
+  <div class="d-flex justify-content-center align-items-center" style="background-color: #6B728E; margin-left: 15%; margin-right: 15%; border-radius: 30px;">
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img src="static/images/image01.jpg" class="d-block " alt="..." width="200">
+            <img src="static/images/fruit.png" class="d-block" alt="" width="300" height="300">
           </div>
           <div class="carousel-item">
-            <img src="static/images/image02.jpg" class="d-block " alt="..." width="200">
+            <img src="static/images/bread.png" class="d-block" alt="" width="300" height="300">
           </div>
           <div class="carousel-item">
-            <img src="static/images/image03.jpg" class="d-block " alt="..." width="200">
+            <img src="static/images/vegetables.png" class="d-block" alt="" width="300" height="300">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
-      </div>
-    <hr>
-    <h1>Food Recall Search</h1>
-    <hr>
-    
-    <br><br>
+    </div>
+  </div>
+    <br>
     <form action="/search" method="post">
-        <label for="input">Search Food Item:</label>
+      <img src="static/images/food-logo.png" alt="Image Description" width="65" height="65" style="margin-left: 9px ">
+        <label for="input" style="color: white;">Food Item:</label>
         <input type="text" id="input" name="input" required>
-        <input type="submit" value="Search" class="btn btn-dark">
+        <input type="submit" value="Search" class="btn btn-dark" style="color: #EE7214;">
+        
     </form>
+    </div>
     <br><br>
-    <hr>
+    
 </body>
-</div>
+
 <footer>
-    <img src="static/images/header2.jpg" width="200" style="margin-top: 2%; margin-left: 85%; border-radius: 100px; opacity: 20%">
+    <p style="color: #393E46; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea and Daniel <p>
 </footer>
 </html>
