@@ -39,7 +39,7 @@ def search():
                 month = datestr[5:6]
                 day = datestr[6:8]
             recallDate = f"{month}/{day}/{year}"
-            return render_template('results.html', recalls = recalls, user_input = user_input)
+            return render_template('results.html', recalls = recalls, user_input = user_input, recallDate = recallDate, reportDate = reportDate)
        except:
             pass
     else:
