@@ -5,11 +5,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Search Results</title>
         {{ bootstrap.load_css() }}
-        {{ bootstrap.load_js() }}
-        <link rel="stylesheet" href="styles.css">
+        
     </head>
 <body style="background-color: #818FB4">
-    <div style="margin-top: 5%" class= "p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
+    
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
              <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -22,8 +21,11 @@
             </div>    
         </nav>
     <hr>
-    <h1 style="text-align: center;">Search Results</h1>
-    <hr>
+    <div class="header-container" style="text-align: center; font-size: medium;">
+        <img src="static/images/food-logo.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
+        Search Results
+        <hr>
+      </div>
     
     <br>
     {% if no_results %}
@@ -51,7 +53,7 @@
         {% endfor %}
     </ul>
     <hr>
-     </div>
+    
      <footer>
        
      </footer>       

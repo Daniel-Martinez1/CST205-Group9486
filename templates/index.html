@@ -12,16 +12,16 @@
   <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">
-        <img src="static/images/logo.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top" style="border-radius: 50px;">
+        <img src="static/images/logo.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top" style="border-radius: 50%;">
         Food Center
       </a>
     </div>
   </nav>
   <br>
-  <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 5%; border-style: dashed; border-color: #EE7214; border-width: 5px;
-  border-spacing: 15px;">
-  <div class="d-flex justify-content-center align-items-center" style="background-color: #6B728E; margin-left: 15%; margin-right: 15%; border-radius: 30px;">
-    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+
+  <div style="display: flex; justify-content: space-between; padding: 0 15%;">
+    <div class="d-flex justify-content-center align-items-center" style="background-color: #707171; width: 50%; border: 2px solid black; border-radius: 8px">
+      <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <img src="static/images/fruit.png" class="d-block" alt="" width="300" height="300">
@@ -41,22 +41,33 @@
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
+      </div>
+    </div>
+
+    <div class="tips-container" style="width: 45%; padding: 20px; border: 2px solid black; border-radius: 8px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)">
+      <h2>Food Safety Tips</h2>
+      <p>1. Wash your hands thoroughly before handling food.</p>
+      <p>2. Keep raw meats separate from other foods to avoid cross-contamination.</p>
+      <p>3. Cook food to the recommended internal temperatures.</p>
+      <p>4. Refrigerate perishable foods promptly.</p>
+      <p>5. Use different cutting boards for raw and cooked foods.</p>
+      <!-- Add more tips as needed -->
     </div>
   </div>
-    <br>
+
+  <br>
+  <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 5%; border-style: dashed; border-color: #EE7214; border-width: 5px; border-spacing: 20px;">
     <form action="/search" method="post">
       <img src="static/images/food-logo.png" alt="Image Description" width="65" height="65" style="margin-left: 9px ">
-        <label for="input" style="color: white;">Food Item:</label>
-        <input type="text" id="input" name="input" required>
-        <input type="submit" value="Search" class="btn btn-dark" style="color: #EE7214;">
-        
+      <label for="input" style="color: white;">Food Item:</label>
+      <input type="text" id="input" name="input" required>
+      <input type="submit" value="Search" class="btn btn-dark" style="color: #EE7214;">
     </form>
-    </div>
-    <br><br>
-    
+  </div>
+  <br><br>
 </body>
 
 <footer>
-    <p style="color: #393E46; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea and Daniel <p>
+  <p style="color: #393E46; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea and Daniel <p>
 </footer>
 </html>
