@@ -7,10 +7,6 @@ import requests, json
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
 
-# api_date_string = recall_initiation_date
-
-# api_date = datetime.strptime(api_date_string, "%Y-%m-%dT%H:%M:%S")
-
 
 API_URL = "https://api.fda.gov/food/enforcement.json"
 
@@ -21,10 +17,7 @@ def index():
 @app.route('/search', methods = ['POST'])
 def search():
     user_input = request.form.get('input')
-    page = int(request.args.get('page', 1))
-    per_page = 10
-    params = {'search': user_input, 'limit': per_page, 'skip': (page - 1) * per_page}
-
+    params = {'search': user_input, 'limit': 20, 'skip': 0}
     response = requests.get(API_URL, params = params)
 
     try:
@@ -43,6 +36,6 @@ def search():
            day = datestr[6:8]
         recallDate = f"{month}/{day}/{year}"
         print(recall)
-        return render_template('results.html', recalls = recalls, user_input = user_input, recallDate =  recallDate, reportDate = reportDate, page=page)
+        return render_template('results.html', recalls = recalls, user_input = user_input, recallDate =  recallDate, reportDate = reportDate)
     except:
         return render_template('results.html', no_results = True, user_input = user_input)
