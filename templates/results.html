@@ -5,15 +5,31 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Search Results</title>
         {{ bootstrap.load_css() }}
+        {{ bootstrap.load_js() }}
     </head>
-<body style="background-color: rgb(62, 121, 84)">
-    <div style="margin-top: 5%" class= "p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
-    <div style="text-align: center; color: black;">
-    <a href="{{ url_for('index') }}" > Search </a>
-    </div>
+<body style="background-color: #707171">
+    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}"> 
+                    <img src="static/images/logo01.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top" style="border-radius: 50%">
+                    <strong style="padding-left: 10px; font-size: 20px">Search</strong> </a>    
+                 </li>
+                </ul>
+              </div> 
+            </div>    
+        </nav>
+    <div style="background-color: #EEEEEE;">
     <hr>
-    <h1 style="text-align: center;">Search Results</h1>
-    <hr>
+    <div class="header-container" style="text-align: center; font-size: medium;">
+        <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
+        <strong style="font-size: 27px;">Search Results</strong>
+        <hr>
+      </div>
     
     <br>
     {% if no_results %}
@@ -30,20 +46,23 @@
                 <br><br>
                 <strong>Adress:</strong> {{ recall.address_1 }}
                 <br><br>
-                <strong>Date Reported:</strong> {{reportDate}}
+                <strong>Date Reported:</strong> {{recallDate}}
                 <br><br>
-                <strong>Date Recalled:</strong> {{recallDate}}
+                <strong>Date Recalled:</strong> {{reportDate}}
                 <br><br>
                 <strong>Product Description:</strong> {{ recall.product_description }}
                 <br><br>
                 <strong>Recall Reason:</strong> {{ recall.reason_for_recall }}
+                <br><br>
+                <strong>Addional:</strong> {{ results }}
             </li>
         {% endfor %}
     </ul>
     <hr>
-     </div>
-     <header>
-        <!-- <img src="static/images/"> -->
-     </header>       
+    </div>
 </body>
+    <footer>
+        <p style="color: #393E46; text-align: center; opacity: 0.4;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
+    </footer>
 </html>
+ <p>hi<p>
