@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Recall Search</title>
+    <title>Home</title>
     {{ bootstrap.load_css() }}
     {{ bootstrap.load_js() }}
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body style="background-color: #EEEEEE; border-top: #393E46; border-style:solid; border-width: 4px;">
+<!-- Alex Mora -->
+<body style="background-color: #EEEEEE; border-top: #393E46; border-style:solid; border-width: 4px; min-height: 100vh; display: flex; flex-direction: column; margin: 0;">
   <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="static/images/logo01.jpg" alt="Logo" width="40" height="34" class="d-inline-block align-text-top" style="border-radius: 50%">
-        <strong style="font-size: 27px; padding-left: 10px;">Food Center</strong>
-      </a>
+      
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}"> 
+        <strong style="padding-left: 10px; margin-left: 20%; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Home</strong> </a>    
+     </li>
+     </ul>
+     <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%;" >
     </div>
   </nav>
+  <main style="flex: 1;">
   <br>
-
+  <div class="header-container" style="text-align: center; font-size: medium;">
+    <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
+    <strong style="font-size: 27px;">Food Recall Search</strong>
+    <hr>
+  </div>
   <div style="display: flex; justify-content: space-between; padding: 0 15%;">
     <div class="d-flex justify-content-center align-items-center" style="background-color: #707171; width: 50%; border: 2px solid black; border-radius: 8px">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -65,18 +75,31 @@
   </div>
 
   <br>
-  <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 5%; border-style: dashed; border-color: #EE7214; border-width: 5px; border-spacing: 20px;">
+  <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 3%; border-style: dashed; border-color: #EE7214; border-width: 5px; border-spacing: 20px; border-radius: 20px;">
+    <strong style="color: #EEEEEE;">Search By Any Category</strong>
     <form action="/search" method="post">
-      <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px ">
-      <label for="input" style="color: white;">Food Item:</label>
-      <input type="text" id="input" name="input" required>
-      <input type="submit" value="Search" class="btn btn-dark" style="color: #EE7214;">
-    </form>
-  </div>
-  <br><br>
-</body>
+        <img src="static/images/logo01.jpg" alt="Image Description" width="65" height="65" style=" border-radius: 50%; ">
+        <label for="input" style="color: white; padding-left: 5%;">State:</label>
+        <input type="text" id="input" name="input">
 
+        <!-- Additional input boxes -->
+        <label for="input" style="color: white; padding-left: 5%;">City:</label>
+        <input type="text" id="cityInput" name="input">
+
+        <label for="input" style="color: white; padding-left: 5%;">Recall Item:</label>
+        <input type="text" id="recallInput" name="input">
+
+        <button type="submit" class="btn btn-dark" style="color: #EE7214; margin-left: 2%;"> Search </button>
+    </form>
+
+</div>
+  <br><br>
+ 
+</body>
+</main>
+<hr>
 <footer>
-  <p style="color: #393E46; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
+  <p style="color: #393E46; text-align: center; opacity: 0.2; padding-bottom: 3px;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
 </footer>
 </html>
+<!-- Alex Mora -->

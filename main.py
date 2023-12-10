@@ -3,21 +3,24 @@ from flask_bootstrap import Bootstrap5
 from datetime import datetime
 import requests, json
 
-
 app = Flask(__name__)
 bootstrap = Bootstrap5(app)
 
-# api_date_string = recall_initiation_date
-
-# api_date = datetime.strptime(api_date_string, "%Y-%m-%dT%H:%M:%S")
-
-
 API_URL = "https://api.fda.gov/food/enforcement.json"
+PRODUCT_API_URL = "https://world.openfoodfacts.org/api/v2/product/737628064502.json"
 
-@app.route('/')
+
+@app.route('/index')
 def index():
     return render_template('index.html')
 
+@app.route('/')
+def home():
+    return render_template('home.html')
+
+
+
+# Daniel Martinez
 @app.route('/search', methods = ['POST'])
 def search():
     user_input = request.form.get('input')
@@ -43,3 +46,5 @@ def search():
         return render_template('results.html', recalls = recalls, user_input = user_input, recallDate =  recallDate, reportDate = reportDate)
     except:
         return render_template('results.html', no_results = True, user_input = user_input)
+# Daniel Martinez
+
