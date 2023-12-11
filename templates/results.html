@@ -3,47 +3,86 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Search Results</title>
+        <title>Recall Results</title>
         {{ bootstrap.load_css() }}
+        {{ bootstrap.load_js() }}
     </head>
-<body style="background-color: rgb(62, 121, 84)">
-    <div style="margin-top: 5%" class= "p-3 text-success-emphasis bg-success-subtle border border-success-subtle rounded-3">
-    <div style="text-align: center; color: black;">
-    <a href="{{ url_for('index') }}" > Search </a>
-    </div>
-    <hr>
-    <h1 style="text-align: center;">Search Results</h1>
-    <hr>
+<body style="background-color: #EEEEEE; min-height: 100vh; display: flex; flex-direction: column; margin: 0;">
+    
+        <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+            <div class="container-fluid">
+             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}"> 
+                    
+                    <strong style="padding-left: 10px; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Home</strong> </a>    
+                 </li>
+                 <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}"> 
+                    <strong style="padding-left: 10px; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Recall Search</strong> </a>    
+                 </li>
+                </ul>
+                <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%;" >
+              </div> 
+            </div>    
+        </nav>
+    <main style="flex: 1;">
+    <div style="background-color: #EEEEEE;">
+    <br>
+    
+    <div class="header-container" style="text-align: center; font-size: medium;">
+        <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
+        <strong style="font-size: 27px;">Search Results</strong>
+        <hr>
+      </div>
     
     <br>
     {% if no_results %}
-        <p style="text-align: center;"> No recalls found for {{ user_input }}!</p>
+        <p style="text-align: center;"> No recalls found for:</p>
     <br>
     {% endif %}
+    <div class="card" style="display: inline-block; margin-bottom: 2%; margin-left: 42%; margin-top: -2%;">
+        <div class="card-body">
+            <h4 class="card-title" style="text-align: center;">{{ user_input }}</h4>
+        </div>
+    </div>
     
-    <ul>
-        {% for recall in recalls %}
-            <li>
+    <div class="card" style="width: 30rem; margin-left: 2%;">
+        
+        <div class="card-body">
+          
+        <ul>
+          <li class="card-text">
+            {% for recall in recalls %}
+            
                 <strong>Product Type:</strong> {{ recall.product_type }}
                 <br><br>
                 <strong>State:</strong> {{ recall.state }}
                 <br><br>
-                <strong>Adress:</strong> {{ recall.address_1 }}
+                <strong>Address:</strong> {{ recall.address_1 }}
                 <br><br>
-                <strong>Date Reported:</strong> {{reportDate}}
+                <strong>Date Reported:</strong> {{recall.report_date}}
                 <br><br>
-                <strong>Date Recalled:</strong> {{recallDate}}
+                <strong>Date Recalled:</strong> {{recall.recall_initiation_date}}
                 <br><br>
                 <strong>Product Description:</strong> {{ recall.product_description }}
                 <br><br>
                 <strong>Recall Reason:</strong> {{ recall.reason_for_recall }}
+                <br><br>
+                
             </li>
         {% endfor %}
-    </ul>
+        </ul>
+        </div>
+    </div>
     <hr>
-     </div>
-     <header>
-        <!-- <img src="static/images/"> -->
-     </header>       
+</div>
+</main>
 </body>
+<div style="background-color: #393E46; padding-top: 10px; padding-bottom: 10px;">
+    <footer>
+        <p style="color: #EEEEEE; text-align: center; opacity: 0.4; margin: 0; padding-top: 10px; padding-bottom: 10px;">CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez</p>
+    </footer>
+</div>
 </html>
