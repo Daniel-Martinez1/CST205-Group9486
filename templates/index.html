@@ -19,7 +19,7 @@
         <strong style="padding-left: 10px; margin-left: 20%; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Home</strong> </a>    
      </li>
      </ul>
-     <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%;" >
+     <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;" >
     </div>
   </nav>
   <main style="flex: 1;">
@@ -30,7 +30,7 @@
     <hr>
   </div>
   <div style="display: flex; justify-content: space-between; padding: 0 15%;">
-    <div class="d-flex justify-content-center align-items-center" style="background-color: #707171; width: 50%; border: 2px solid black; border-radius: 8px">
+    <div class="d-flex justify-content-center align-items-center" style="background-color: #707171; width: 50%; border: 2px solid black; border-radius: 8px; border-top-color: #EE7214; border-left-color: #EE7214;">
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -63,7 +63,7 @@
       </div>
     </div>
 
-    <div class="tips-container" style="width: 45%; padding: 20px; border: 2px solid black; border-radius: 8px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)">
+    <div class="tips-container" style="width: 45%; padding: 20px; border: 2px solid black; border-radius: 8px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-top-color: #EE7214; border-left-color: #EE7214;">
       <h2>Food Safety Tips</h2>
       <p>1. Wash your hands thoroughly before handling food.</p>
       <p>2. Keep raw meats separate from other foods to avoid cross-contamination.</p>
@@ -78,16 +78,16 @@
   <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 3%; border-style: dashed; border-color: #EE7214; border-width: 5px; border-spacing: 20px; border-radius: 20px;">
     <strong style="color: #EEEEEE;">Search By Any Category</strong>
     <form action="/search" method="post">
-        <img src="static/images/logo01.jpg" alt="Image Description" width="65" height="65" style=" border-radius: 50%; ">
+        <img src="static/images/logo01.jpg" alt="Image Description" width="65" height="65" style=" border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;">
         <label for="input" style="color: white; padding-left: 5%;">State:</label>
-        <input type="text" id="input" name="input">
+        <input type="text" id="input" name="state">
 
         <!-- Additional input boxes -->
         <label for="input" style="color: white; padding-left: 5%;">City:</label>
-        <input type="text" id="cityInput" name="input">
+        <input type="text" id="input" name="city">
 
         <label for="input" style="color: white; padding-left: 5%;">Recall Item:</label>
-        <input type="text" id="recallInput" name="input">
+        <input type="text" id="input" name="recall_item">
 
         <button type="submit" class="btn btn-dark" style="color: #EE7214; margin-left: 2%;"> Search </button>
     </form>
@@ -97,9 +97,8 @@
  
 </body>
 </main>
-<hr>
-<footer>
-  <p style="color: #393E46; text-align: center; opacity: 0.2; padding-bottom: 3px;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
+<footer style="background-color: #393E46; padding-top: 20px; padding-bottom: 10px;">
+  <p style="color: #EEEEEE; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
 </footer>
 </html>
 <!-- Alex Mora -->
