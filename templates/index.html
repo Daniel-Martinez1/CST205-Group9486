@@ -18,20 +18,20 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
         <a class="nav-link active" aria-current="page" href="{{ url_for('home') }}"> 
-        <strong style="padding-left: 10px; margin-left: 20%; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Home</strong> </a>    
+        <strong style="padding-left: 10px; margin-left: 20%; padding-right: 10px;font-size: 25px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Home</strong> </a>    
      </li>
      </ul>
 
-     <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;" >
+     <img src="static/images/product-logo.jpg" alt="Image Description" width="95" height="95" style="margin-left: 9px; border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;" >
 
     </div>
   </nav>
   <main style="flex: 1;">
   <br>
   <div class="header-container" style="text-align: center; font-size: medium;">
-    <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
+    <img src="static/images/logo02.png" alt="Image Description" width="105" height="105" style="margin-left: 9px" >
 
-    <strong style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">Food Recall Search</strong>
+    <strong style="font-size: 45px; font-family: 'Courier New', Courier, monospace;">Food Recall Search</strong>
     <hr>
   </div>
   <div style="display: flex; justify-content: space-between; padding: 0 15%;">
@@ -72,11 +72,11 @@
     <div class="tips-container" style="width: 45%; padding: 20px; border: 2px solid black; border-radius: 8px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-top-color: #EE7214; border-left-color: #EE7214; font-family: 'Courier New', Courier, monospace;">
       <h2><strong><u>Food Safety Tips</u></strong></h2>
 
-      <p>1. Wash your hands thoroughly before handling food.</p>
-      <p>2. Keep raw meats separate from other foods to avoid cross-contamination.</p>
-      <p>3. Cook food to the recommended internal temperatures.</p>
-      <p>4. Refrigerate perishable foods promptly.</p>
-      <p>5. Use different cutting boards for raw and cooked foods.</p>
+      <p style="font-size: 22px;">1. Wash your hands thoroughly before handling food.</p>
+      <p style="font-size: 22px;">2. Keep raw meats separate from other foods to avoid cross-contamination.</p>
+      <p style="font-size: 22px;">3. Cook food to the recommended internal temperatures.</p>
+      <p style="font-size: 22px;">4. Refrigerate perishable foods promptly.</p>
+      <p style="font-size: 22px;">5. Use different cutting boards for raw and cooked foods.</p>
       
     </div>
   </div>
@@ -85,20 +85,20 @@
   <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 3%; border-style: dashed; border-color: #EE7214; border-width: 5px; border-spacing: 20px; border-radius: 20px;">
 
     <div style="margin-top: -2%;">
-    <strong style="color: #EEEEEE;"><u>Search By Any Category</u></strong>
+    <strong style="color: #EEEEEE;font-size: 40px;"><u>Search By Any Category</u></strong>
     </div>
     <form action="/search" method="post">
-        <img src="static/images/logo01.jpg" alt="Image Description" width="65" height="65" style=" border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;">
-        <label for="input" style="color: white; padding-left: 5%;">State:</label>
+        <img src="static/images/logo01.jpg" alt="Image Description" width="125" height="125" style=" border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;">
+        <label for="input" style="color: white; padding-left: 5%;font-size: 25px;">State:</label>
         <input type="text" id="state" name="state" maxlength="2">
 
-        <label for="input" style="color: white; padding-left: 5%;">City:</label>
+        <label for="input" style="color: white; padding-left: 5%;font-size: 25px;">City:</label>
         <input type="text" id="city" name="city">
 
-        <label for="input" style="color: white; padding-left: 5%;">Recall Item:</label>
+        <label for="input" style="color: white; padding-left: 5%;font-size: 25px;">Recall Item:</label>
         <input type="text" id="recall_item" name="recall_item">
 
-        <button type="submit" class="btn btn-dark" style="color: #EE7214; margin-left: 2%;"> Search </button>
+        <button type="submit" class="btn btn-dark" style="color: #EE7214; margin-left: 2%;font-size: 28px"> Search </button>
     </form>
 
 
