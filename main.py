@@ -35,10 +35,8 @@ def home():
 def search():
     state = request.form.get('state')
     city = request.form.get('city')
-    recall_item = request.form.get('recall')
-
-    user_input = str(state) + str(city) + str(recall_item)
-
+    recall_item = request.form.get('recall_item')
+    user_input = state + city + recall_item
     params = {'search':user_input, 'limit': 20, 'skip': 0}
     user_input = f'{state} {city} {recall_item}'
     response = requests.get(API_URL, params = params)
