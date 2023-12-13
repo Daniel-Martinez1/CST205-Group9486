@@ -6,6 +6,15 @@
     <title>Product Search</title>
     {{ bootstrap.load_css() }}
     {{ bootstrap.load_js() }}
+    
+    <style type ="text/css" >
+      .footer{ 
+          position: fixed;     
+          text-align: center;    
+          bottom: 0px; 
+          width: 100%;
+      }  
+   </style>
 </head>
 
 <!-- Andrea Hernandez Start: This creates a visually appealing and structured web page for the "Food Center" application. It incorporates styling, images, and informative content to enhance the user experience.  -->
@@ -18,12 +27,12 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}"> 
                 
-                <strong style="padding-left: 10px; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Recall Search</strong> </a>    
+                <strong style="padding-left: 10px; padding-right: 10px;font-size: 25px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Recall Search</strong> </a>    
              </li>
           
             </ul>
 
-            <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;" >
+            <img src="static/images/product-logo.jpg" alt="Image Description" width="95" height="95" style="margin-left: 9px; border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;" >
 
           </div> 
         </div>    
@@ -31,9 +40,9 @@
     <br>
     <div style="background-color: #EEEEEE;">
         <div class="header-container" style="text-align: center; font-size: medium;">
-          <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
+          <img src="static/images/logo02.png" alt="Image Description" width="105" height="105" style="margin-left: 9px" >
 
-        <strong style="font-size: 27px; padding-top: 10px; font-family: 'Courier New', Courier, monospace;">Food Center</strong>
+        <strong style="font-size: 45px; padding-top: 10px; font-family: 'Courier New', Courier, monospace;">Food Center</strong>
 
     </div>
     <hr>
@@ -41,16 +50,16 @@
     <div style="text-align: center;">
       <img src="static/images/home-image01.png" alt="top-image" width="900" height="400" style="border-radius: 20px; display: block; margin: auto; margin-bottom: 5px; border-style: dashed; border-color: #EE7214; border-width: 5px;">
 
-      <div style="background-color: white; border-style: solid; border-width: 2px; border-color:#393E46; border-top-color: #EE7214; border-left-color: #EE7214 ;margin-bottom: 2%; border-radius: 20px; margin-left: 5%; margin-right: 5%; margin-top: 2%;">
+      <div style="background-color: white; border-style: solid; border-width: 2px; border-color:#393E46; border-top-color: #EE7214; border-left-color: #EE7214 ;margin-bottom: 2%; border-radius: 20px; margin-left: 15%; margin-right: 15%; margin-top: 2%;">
 
-        <p style="margin-top: 15px; color: #333;">Ensuring food safety is essential for a healthy and happy life. Learn more about keeping your food safe and secure.</p>
+        <p style="margin-top: 15px; font-size: 25px;color: #333;">Ensuring food safety is essential for a healthy and happy life. Learn more about keeping your food safe and secure.</p>
       </div>
     </div>
 
 </body>
 
-  <footer style="background-color: #393E46; padding-top: 20px; padding-bottom: 10px;">
-    <p style="color: #EEEEEE; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
+  <footer style="background-color: #393E46; padding-top: 20px; padding-bottom: 10px;margin-right:0%">
+    <p style="color: rgb(255, 255, 255); text-align: center; opacity: 0.6;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
   </footer>
 
 </html>
