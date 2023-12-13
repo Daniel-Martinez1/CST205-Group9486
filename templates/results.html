@@ -7,6 +7,7 @@
         {{ bootstrap.load_css() }}
         {{ bootstrap.load_js() }}
     </head>
+<!-- Alex Mora Start -->
 <body style="background-color: #EEEEEE; min-height: 100vh; display: flex; flex-direction: column; margin: 0;">
     
         <nav class="navbar navbar-expand-lg bg-body-tertiary navbar bg-dark border-bottom border-body" data-bs-theme="dark">
@@ -38,10 +39,16 @@
       </div>
     
     <br>
+<!-- Alex Mora End -->
+
+<!-- Daniel Martinez Start -->
     {% if no_results %}
         <p style="text-align: center;"> No recalls found for:</p>
     <br>
     {% endif %}
+<!-- Daniel Martinez End -->
+
+<!-- Alex Mora Start -->
     <div class="card" style="width: 15rem; height: 50px; margin-bottom: 2%; margin-left: 42%; margin-top: -2%; border-color: #EE7214;">
         <div class="card-body">
             <h4 class="card-title" style="text-align: center;">{{ user_input }}</h4>
@@ -54,11 +61,16 @@
           
         <ul>
           <li class="card-text">
+<!-- Alex Mora End -->
+
+<!-- Daniel Martinez Start -->            
             {% for recall in recalls %}
             
                 <strong>Product Type:</strong> {{ recall.product_type }}
                 <br><br>
                 <strong>State:</strong> {{ recall.state }}
+                <br><br>
+                <strong>City:</strong> {{ recall.city }}
                 <br><br>
                 <strong>Adress:</strong> {{ recall.address_1 }}
                 <br><br>
@@ -70,9 +82,10 @@
                 <br><br>
                 <strong>Recall Reason:</strong> {{ recall.reason_for_recall }}
                 <br><br>
-                
+                <hr>
             </li>
         {% endfor %}
+<!-- Daniel Martinez End -->        
         </ul>
         </div>
     </div>

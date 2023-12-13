@@ -16,7 +16,7 @@ def index():
 def home():
     return render_template('home.html')
 
-# Daniel Martinez
+# Daniel Martinez Start
 @app.route('/search', methods = ['POST'])
 def search():
     state = request.form.get('state')
@@ -48,4 +48,4 @@ def search():
         return render_template('results.html', recalls = recalls, user_input = user_input, recallDate =  recallDate, reportDate = reportDate)
     except:
         return render_template('results.html', no_results = True, user_input = user_input)
-
+# Daniel Martinez End
