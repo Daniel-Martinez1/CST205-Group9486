@@ -8,7 +8,9 @@
     {{ bootstrap.load_js() }}
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<!-- Alex Mora -->
+
+<!-- Alex Mora Start: This code defines the structure of the web page for the "Food Recall Search" application. It includes a navigation bar, a main content section with an image carousel and food safety tips, and a search form -->
+
 <body style="background-color: #EEEEEE; border-top: #393E46; border-style:solid; border-width: 4px; min-height: 100vh; display: flex; flex-direction: column; margin: 0;">
   <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
     <div class="container-fluid">
@@ -19,18 +21,22 @@
         <strong style="padding-left: 10px; margin-left: 20%; padding-right: 10px;font-size: 15px; border-style: solid; border-color: white; border-width: 1px; border-radius: 5px; border-left-color:#EE7214; border-top-color: #EE7214;">Home</strong> </a>    
      </li>
      </ul>
-     <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%;" >
+
+     <img src="static/images/product-logo.jpg" alt="Image Description" width="65" height="65" style="margin-left: 9px; border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;" >
+
     </div>
   </nav>
   <main style="flex: 1;">
   <br>
   <div class="header-container" style="text-align: center; font-size: medium;">
     <img src="static/images/logo02.png" alt="Image Description" width="65" height="65" style="margin-left: 9px" >
-    <strong style="font-size: 27px;">Food Recall Search</strong>
+
+    <strong style="font-size: 30px; font-family: 'Courier New', Courier, monospace;">Food Recall Search</strong>
     <hr>
   </div>
   <div style="display: flex; justify-content: space-between; padding: 0 15%;">
-    <div class="d-flex justify-content-center align-items-center" style="background-color: #707171; width: 50%; border: 2px solid black; border-radius: 8px">
+    <div class="d-flex justify-content-center align-items-center" style="background-color: #707171; width: 50%; border: 2px solid black; border-radius: 8px; border-top-color: #EE7214; border-left-color: #EE7214;">
+
       <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -63,8 +69,9 @@
       </div>
     </div>
 
-    <div class="tips-container" style="width: 45%; padding: 20px; border: 2px solid black; border-radius: 8px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1)">
-      <h2>Food Safety Tips</h2>
+    <div class="tips-container" style="width: 45%; padding: 20px; border: 2px solid black; border-radius: 8px; background-color: #f8f9fa; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); border-top-color: #EE7214; border-left-color: #EE7214; font-family: 'Courier New', Courier, monospace;">
+      <h2><strong><u>Food Safety Tips</u></strong></h2>
+
       <p>1. Wash your hands thoroughly before handling food.</p>
       <p>2. Keep raw meats separate from other foods to avoid cross-contamination.</p>
       <p>3. Cook food to the recommended internal temperatures.</p>
@@ -76,30 +83,34 @@
 
   <br>
   <div style="background-color: #393E46; text-align: center; padding-top: 3%; padding-bottom: 3%; border-style: dashed; border-color: #EE7214; border-width: 5px; border-spacing: 20px; border-radius: 20px;">
-    <strong style="color: #EEEEEE;">Search By Any Category</strong>
+
+    <div style="margin-top: -2%;">
+    <strong style="color: #EEEEEE;"><u>Search By Any Category</u></strong>
+    </div>
     <form action="/search" method="post">
-      <img src="static/images/logo01.jpg" alt="Image Description" width="65" height="65" style=" border-radius: 50%; ">
-      
-      <label for="stateInput" style="color: white; padding-left: 5%;">State:</label>
-      <input type="text" id="stateInput" name="state">
-  
-      <label for="cityInput" style="color: white; padding-left: 5%;">City:</label>
-      <input type="text" id="cityInput" name="city">
-  
-      <label for="recallInput" style="color: white; padding-left: 5%;">Recall Item:</label>
-      <input type="text" id="recallInput" name="recall">
-  
-      <button type="submit" class="btn btn-dark" style="color: #EE7214; margin-left: 2%;"> Search </button>
-  </form>
+        <img src="static/images/logo01.jpg" alt="Image Description" width="65" height="65" style=" border-radius: 50%; border-style: dashed; border-width: 4px; border-color: #EE7214;">
+        <label for="input" style="color: white; padding-left: 5%;">State:</label>
+        <input type="text" id="state" name="state" maxlength="2">
+
+        <label for="input" style="color: white; padding-left: 5%;">City:</label>
+        <input type="text" id="city" name="city">
+
+        <label for="input" style="color: white; padding-left: 5%;">Recall Item:</label>
+        <input type="text" id="recall_item" name="recall_item">
+
+        <button type="submit" class="btn btn-dark" style="color: #EE7214; margin-left: 2%;"> Search </button>
+    </form>
+
 
 </div>
   <br><br>
  
 </body>
 </main>
-<hr>
-<footer>
-  <p style="color: #393E46; text-align: center; opacity: 0.2; padding-bottom: 3px;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
+
+<footer style="background-color: #393E46; padding-top: 20px; padding-bottom: 10px;">
+  <p style="color: #EEEEEE; text-align: center; opacity: 0.2;"> CST-205: This Web Application was created by Alex Mora, Andrea Hernandez & Daniel Martinez <p>
 </footer>
 </html>
-<!-- Alex Mora -->
+<!-- Alex Mora End -->
+
