@@ -39,7 +39,7 @@ def search():
 
     user_input = str(state) + str(city) + str(recall_item)
 
-    params = {'search':input, 'limit': 20, 'skip': 0}
+    params = {'search':user_input, 'limit': 20, 'skip': 0}
     user_input = f'{state} {city} {recall_item}'
     response = requests.get(API_URL, params = params)
 
